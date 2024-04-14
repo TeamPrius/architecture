@@ -1,7 +1,7 @@
 # architecture
 
-Repository to contain security architecture we designed
+This repository will contain a security architecture we designed for the capstone project of the Fields/Cyber Connexion cybersecurity program.
 
 # rough work
 
-This repository will contain a security architecture we designed for the capstone project of the Fields/Cyber Connexion cybersecurity program.
+We include some rough work in archived repositories.

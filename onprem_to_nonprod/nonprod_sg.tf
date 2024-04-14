@@ -1,17 +1,19 @@
-#Create Security Group for on Prem instance
-resource "aws_security_group" "onprem_sg" {
-  name        = "app_sg"
-  description = "Security Group for the onprem EC2"
-  vpc_id      = aws_vpc.onprem.id
+# create nonprod security groups
+
+resource "aws_security_group" "nonprod_sg" {
+  name        = "nonprod-sg"
+  description = "allow https and icmp traffic"
+  vpc_id      = aws_vpc.nonprod.id
 
   tags = {
-    Name = "onprem EC2"
+    Name = "nonprod-sg"
   }
 }
 
+
 # ingress rules
-resource "aws_vpc_security_group_ingress_rule" "onprem_sg_ingr" {
-  security_group_id = aws_security_group.onprem_sg.id
+resource "aws_vpc_security_group_ingress_rule" "nonprod_sg_ingr" {
+  security_group_id = aws_security_group.nonprod_sg.id
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "-1"
 }
@@ -43,10 +45,11 @@ resource "aws_vpc_security_group_ingress_rule" "onprem_sg_ingr" {
 #}
 
 
+#Outbound rules
 
-#Outbound rule
-resource "aws_vpc_security_group_egress_rule" "onprem_allow_all_traffic_ipv4" {
-  security_group_id = aws_security_group.onprem_sg.id
+resource "aws_vpc_security_group_egress_rule" "nonprod_sg_egr" {
+  security_group_id = aws_security_group.nonprod_sg.id
   cidr_ipv4         = "0.0.0.0/0"
-  ip_protocol       = "-1" # semantically equivalent to all ports
+  ip_protocol       = "-1"
 }
+

@@ -12,7 +12,7 @@ In the [onprem_to_nonprod folder](https://github.com/TeamPrius/architecture/tree
 
 ## onprem_to_prod
 
-In the [onprem_to_prod](https://github.com/TeamPrius/architecture/tree/main/onprem_to_prod) we provide the Terraform code used to design the portion of our architecture relating to the on premises and production environments.
+In the [onprem_to_prod folder](https://github.com/TeamPrius/architecture/tree/main/onprem_to_prod) we provide the Terraform code used to design the portion of our architecture relating to the on premises and production environments.
 
 ## rough work
 

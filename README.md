@@ -6,11 +6,11 @@ This repository will contain a security architecture we designed for the capston
 
 In the [architecture_visualization folder](https://github.com/TeamPrius/architecture/tree/main/architecture_visualization) we include the draw.io code which was used to design the architecture. In addition, we provide an image which illustrates the design.
 
-## onprem_to_nonprod
+## onprem to nonprod
 
 In the [onprem_to_nonprod folder](https://github.com/TeamPrius/architecture/tree/main/onprem_to_nonprod) we provide the Terraform code used to design the portion of our architecture relating to the on premises and non-production environments.
 
-## onprem_to_prod
+## onprem to prod
 
 In the [onprem_to_prod folder](https://github.com/TeamPrius/architecture/tree/main/onprem_to_prod) we provide the Terraform code used to design the portion of our architecture relating to the on premises and production environments.
 

@@ -1,6 +1,13 @@
 # architecture
 
-This repository will contain a security architecture we designed for the capstone project of the Fields/Cyber Connexion cybersecurity program. In order to compile on our AWS lab environment we have split up the architecture into two parts. One contains the on premises and non-production environments. The other contains the on premises and production environments.
+This repository contains a hybrid cloud environment we designed for the capstone project of the Fields/Cyber Connexion cybersecurity program. The design includes three environments:
+
+1. A production environment which contains a three-tier highly available application
+2. A non-production environment
+3. An on-premises environment
+
+> [!NOTE]
+> In order to compile on our AWS lab environment we have split up the architecture into two parts. One contains the on premises and non-production environments. The other contains the on premises and production environments.
 
 ## architecture visualization
 

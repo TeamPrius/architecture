@@ -1,7 +1,7 @@
 # nonprod vpc
 
 resource "aws_vpc" "nonprod" {
-  cidr_block = "172.19.0.0/24"  
+  cidr_block = var.nonprod_vpc_cidr_block  
   tags = {
      Name = "nonprod vpc"
   }
@@ -11,8 +11,8 @@ resource "aws_vpc" "nonprod" {
 
 resource "aws_subnet" "private_subnet_nonprod" {
   vpc_id                  = aws_vpc.nonprod.id
-  cidr_block              = "172.19.0.0/25"
-  availability_zone       = "us-east-1a"
+  cidr_block              = var.nonprod_private_subnet_cidr_block
+  availability_zone       = data.aws_availability_zone.current_availability_zone.name
   map_public_ip_on_launch = false
   
   tags = {
